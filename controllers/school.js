@@ -2,7 +2,6 @@ import db from "../connection/db.js"
 
 export const addSchool = async (req, res) => {
     const { name, address, latitude, longitude } = req.body;
-    console.log(req.body)
     if (!name || !address || !latitude || !longitude) {
         return res.status(400).json({ error: "All fields are required" })
     }
